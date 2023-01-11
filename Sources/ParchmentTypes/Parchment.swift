@@ -8,7 +8,7 @@ import Gardener
 
 public protocol Parchment: Sequence, Collection, MutableCollection, BidirectionalCollection, RandomAccessCollection
 {
-    static func create(_ url: URL, value: UInt64) throws -> Self
+    static func create(_ url: URL, value: UInt64) throws -> any Parchment
 
     var fileSize: Int { get }
 
